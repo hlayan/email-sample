@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_inbox">
+
+    <fragment
+        android:id="@+id/nav_inbox"
+        android:name="com.shan.mailtest.ui.main.inbox.InboxFragment"
+        android:label="@string/menu_inbox"
+        tools:layout="@layout/fragment_inbox">
+        <action
+            android:id="@+id/action_nav_inbox_to_nav_details"
+            app:destination="@id/nav_details"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_outbox"
+        android:name="com.shan.mailtest.ui.main.outbox.OutboxFragment"
+        android:label="@string/menu_outbox"
+        tools:layout="@layout/fragment_outbox" />
+
+    <fragment
+        android:id="@+id/nav_spam"
+        android:name="com.shan.mailtest.ui.main.spam.SpanFragment"
+        android:label="@string/menu_spam"
+        tools:layout="@layout/fragment_spam" />
+
+    <fragment
+        android:id="@+id/nav_sent"
+        android:name="com.shan.mailtest.ui.main.sent.SentFragment"
+        android:label="@string/menu_sent"
+        tools:layout="@layout/fragment_sent" />
+
+    <fragment
+        android:id="@+id/nav_draft"
+        android:name="com.shan.mailtest.ui.main.draft.DraftFragment"
+        android:label="@string/menu_draft"
+        tools:layout="@layout/fragment_draft" />
+
+    <fragment
+        android:id="@+id/nav_trash"
+        android:name="com.shan.mailtest.ui.main.trash.TrashFragment"
+        android:label="@string/menu_junk"
+        tools:layout="@layout/fragment_trash" />
+
+    <fragment
+        android:id="@+id/nav_details"
+        android:name="com.shan.mailtest.ui.main.details.DetailsFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_details"
+        app:startDestination="@id/action_nav_details_to_replyFragment">
+        <action
+            android:id="@+id/action_nav_details_to_replyFragment"
+            app:destination="@id/nav_reply"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_reply"
+        android:name="com.shan.mailtest.ui.main.reply.ReplyFragment"
+        android:label="Reply"
+        tools:layout="@layout/fragment_reply" />
+
+</navigation>

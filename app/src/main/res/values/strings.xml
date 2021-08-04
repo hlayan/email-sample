@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">MailTest</string>
+
+    <string name="menu_search_title">Search</string>
+    <string name="action_compose">Compose</string>
+
+    <string name="button_reply">Reply</string>
+    <string name="button_forward">Forward</string>
+    <string name="button_reply_all">Reply all</string>
+
+    <string name="menu_markunread">Mark unread</string>
+    <string name="menu_archive">Archive</string>
+    <string name="menu_all_labels">All labels</string>
+    <string name="menu_spam">Spam</string>
+    <string name="menu_draft">Draft</string>
+    <string name="menu_trash">Trash</string>
+    <string name="menu_outbox">Outbox</string>
+    <string name="menu_inbox">Inbox</string>
+    <string name="menu_sent">Sent</string>
+    <string name="menu_junk">Junk</string>
+    <string name="menu_delete">Delete</string>
+    <string name="dialog_delete_chat">Delete chat</string>
+    <string name="dialog_cancel_text_button">Cancel</string>
+    <string name="dialog_delete_text_button">Delete</string>
+    <string name="dialog_description_text">Are you sure you want to delete selected chats?</string>
+    <string name="text_from_title">From</string>
+    <string name="hint_subject">Subject</string>
+    <string name="hint_contents">Contents</string>
+    <string name="text_to_title">To</string>
+    <string name="menu_attach_file">Attach file</string>
+    <string name="menu_send">Send</string>
+    <string name="hint_email_example">example@gmail.com</string>
+
+    <string-array name="array_reply">
+        <item>Reply</item>
+        <item>Reply all</item>
+        <item>Forward</item>
+    </string-array>
+
+</resources>

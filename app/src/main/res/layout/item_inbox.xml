@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/list_choice_item_selector"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/text_sender_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:padding="2dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/text_subject_inbox"
+        app:layout_constraintEnd_toStartOf="@id/text_received_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Sender Id" />
+
+    <TextView
+        android:id="@+id/text_received_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:padding="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/text_sender_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_sender_id"
+        tools:text="12:57 PM" />
+
+    <TextView
+        android:id="@+id/text_subject_inbox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:padding="2dp"
+        android:singleLine="true"
+        app:layout_constraintBottom_toTopOf="@id/text_messages_inbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_sender_id"
+        tools:text="Subject" />
+
+    <TextView
+        android:id="@+id/text_messages_inbox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:padding="2dp"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_subject_inbox"
+        tools:text="Messages" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

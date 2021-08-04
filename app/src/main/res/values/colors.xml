@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primary">#308CCD</color>
+    <color name="primary_accent">@color/primary</color>
+    <color name="primary_dark">#2A7BB4</color>
+    <color name="primary_light">#4899D3</color>
+    <color name="primary_highlight">#1F308CCD</color>
+
+    <color name="black">#FF000000</color>
+
+    <color name="listChoiceItemBackground">@color/primary_highlight</color>
+    <color name="listSelectedItemBackground">@color/primary_light</color>
+
+    <color name="divider">#80AAAAAA</color>
+
+    <color name="gray_highlight">#1FAAAAAA</color>
+
+</resources>

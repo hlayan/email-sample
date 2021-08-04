@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.compose.ComposeActivity"
+    tools:ignore="HardcodedText">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/Theme.MailTest.AppBarOverlay"
+        app:menu="@menu/menu_compose"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+        app:popupTheme="@style/Theme.MailTest.PopupOverlay"
+        app:title="Compose" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title_from"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                android:text="@string/text_from_title"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_mailAddress_from"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:background="@drawable/background_edittext_normal"
+                android:padding="8dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_from"
+                tools:text="hlayanhtetaung@gmail.com" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title_to"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                android:text="@string/text_to_title"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_mailAddress_from" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_to"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:background="@drawable/background_edittext_normal"
+                android:hint="@string/hint_email_example"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:padding="8dp"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_to" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/background_edittext_normal"
+                android:hint="@string/hint_subject"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:padding="8dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_cc" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_cc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/background_edittext_normal"
+                android:hint="Bcc"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:padding="8dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_bcc" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_bcc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/background_edittext_normal"
+                android:hint="Cc"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:padding="8dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_to" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/background_edittext_normal"
+                android:hint="@string/hint_contents"
+                android:importantForAutofill="no"
+                android:padding="8dp"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_subject" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_attachment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingVertical="4dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/et_message"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_attachment" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

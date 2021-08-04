@@ -1,0 +1,21 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/primary_accent</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.MailTest.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.MailTest.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="NavigationItemNoRipple">
+        <item name="android:colorControlHighlight">@android:color/transparent</item>
+    </style>
+
+</resources>

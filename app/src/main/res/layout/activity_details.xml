@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:transitionName="@string/app_name"
+    tools:context=".ui.main.details.DetailsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/Theme.MailTest.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/menu_details"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+        app:popupTheme="@style/Theme.MailTest.PopupOverlay"
+        app:title="Details" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/button_goto_reply_all"
+        app:layout_constraintTop_toBottomOf="@id/tv_date">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="WebViewLayout">
+
+            <WebView
+                android:id="@+id/wv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_attachment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="10"
+                tools:listitem="@layout/item_attachment" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="4dp"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        tools:text="Subject" />
+
+    <TextView
+        android:id="@+id/tv_from"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/tv_subject"
+        tools:text="From" />
+
+    <TextView
+        android:id="@+id/tv_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/tv_from"
+        tools:text="To" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/tv_to"
+        tools:text="Date" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/button_goto_reply"
+        style="@style/TextButtonStyle"
+        android:layout_margin="16dp"
+        android:text="@string/button_reply"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button_goto_reply_all"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/button_goto_reply_all"
+        style="@style/TextButtonStyle"
+        android:layout_marginVertical="8dp"
+        android:text="@string/button_reply_all"
+        android:transitionName="ReplayAllButton"
+        app:layout_constraintBottom_toBottomOf="@id/button_goto_reply"
+        app:layout_constraintEnd_toStartOf="@id/button_goto_forward"
+        app:layout_constraintStart_toEndOf="@id/button_goto_reply"
+        app:layout_constraintTop_toTopOf="@id/button_goto_reply" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/button_goto_forward"
+        style="@style/TextButtonStyle"
+        android:layout_margin="16dp"
+        android:text="@string/button_forward"
+        app:layout_constraintBottom_toBottomOf="@id/button_goto_reply_all"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_goto_reply_all"
+        app:layout_constraintTop_toTopOf="@id/button_goto_reply_all" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

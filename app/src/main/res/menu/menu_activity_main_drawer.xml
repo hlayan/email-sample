@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_inbox"
+            android:icon="@drawable/ic_menu_inbox"
+            android:title="@string/menu_inbox"
+            app:actionViewClass="android.widget.TextView" />
+        <item
+            android:id="@+id/nav_outbox"
+            android:icon="@drawable/ic_menu_outbox"
+            android:title="@string/menu_outbox"
+            app:actionViewClass="android.widget.TextView" />
+    </group>
+
+    <item android:title="@string/menu_all_labels">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_spam"
+                    android:icon="@drawable/ic_menu_spam"
+                    android:title="@string/menu_spam"
+                    app:actionViewClass="android.widget.TextView" />
+                <item
+                    android:id="@+id/nav_sent"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="@string/menu_sent"
+                    app:actionViewClass="android.widget.TextView" />
+
+                <item
+                    android:id="@+id/nav_draft"
+                    android:icon="@drawable/ic_menu_draft"
+                    android:title="@string/menu_draft"
+                    app:actionViewClass="android.widget.TextView" />
+                <item
+                    android:id="@+id/nav_trash"
+                    android:icon="@drawable/ic_menu_trash"
+                    android:title="@string/menu_trash"
+                    app:actionViewClass="android.widget.TextView" />
+            </group>
+        </menu>
+    </item>
+</menu>
