@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_inbox"
-        android:name="com.shan.mailtest.ui.main.inbox.InboxFragment"
+        android:name="com.hlayan.emailsample.ui.main.inbox.InboxFragment"
         android:label="@string/menu_inbox"
         tools:layout="@layout/fragment_inbox">
         <action
@@ -21,37 +21,37 @@
 
     <fragment
         android:id="@+id/nav_outbox"
-        android:name="com.shan.mailtest.ui.main.outbox.OutboxFragment"
+        android:name="com.hlayan.emailsample.ui.main.outbox.OutboxFragment"
         android:label="@string/menu_outbox"
         tools:layout="@layout/fragment_outbox" />
 
     <fragment
         android:id="@+id/nav_spam"
-        android:name="com.shan.mailtest.ui.main.spam.SpanFragment"
+        android:name="com.hlayan.emailsample.ui.main.spam.SpanFragment"
         android:label="@string/menu_spam"
         tools:layout="@layout/fragment_spam" />
 
     <fragment
         android:id="@+id/nav_sent"
-        android:name="com.shan.mailtest.ui.main.sent.SentFragment"
+        android:name="com.hlayan.emailsample.ui.main.sent.SentFragment"
         android:label="@string/menu_sent"
         tools:layout="@layout/fragment_sent" />
 
     <fragment
         android:id="@+id/nav_draft"
-        android:name="com.shan.mailtest.ui.main.draft.DraftFragment"
+        android:name="com.hlayan.emailsample.ui.main.draft.DraftFragment"
         android:label="@string/menu_draft"
         tools:layout="@layout/fragment_draft" />
 
     <fragment
         android:id="@+id/nav_trash"
-        android:name="com.shan.mailtest.ui.main.trash.TrashFragment"
+        android:name="com.hlayan.emailsample.ui.main.trash.TrashFragment"
         android:label="@string/menu_junk"
         tools:layout="@layout/fragment_trash" />
 
     <fragment
         android:id="@+id/nav_details"
-        android:name="com.shan.mailtest.ui.main.details.DetailsFragment"
+        android:name="com.hlayan.emailsample.ui.main.details.DetailsFragment"
         android:label="Details"
         tools:layout="@layout/fragment_details"
         app:startDestination="@id/action_nav_details_to_replyFragment">
@@ -66,7 +66,7 @@
 
     <fragment
         android:id="@+id/nav_reply"
-        android:name="com.shan.mailtest.ui.main.reply.ReplyFragment"
+        android:name="com.hlayan.emailsample.ui.main.reply.ReplyFragment"
         android:label="Reply"
         tools:layout="@layout/fragment_reply" />
 

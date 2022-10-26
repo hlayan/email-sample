@@ -9,7 +9,7 @@ android {
     compileSdkVersion 33
 
     defaultConfig {
-        applicationId "com.shan.mailtest"
+        applicationId "com.hlayan.emailsample"
         minSdkVersion 21
         targetSdkVersion 33
         versionCode 1
