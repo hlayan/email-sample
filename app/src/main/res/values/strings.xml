@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MailTest</string>
+    <string name="app_name">email-sample</string>
 
     <string name="menu_search_title">Search</string>
     <string name="action_compose">Compose</string>
